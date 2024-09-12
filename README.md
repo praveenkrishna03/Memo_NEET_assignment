@@ -1,8 +1,36 @@
 # Memo_NEET_assignment
 
+## Memo Streak Feature Implementation
 
+The **Memo Streak** feature has been implemented to motivate and track user engagement through a streak-based system. Below is an overview of the implementation details:
 
+### Key Components
 
+#### Streak Tiers
+
+- **Aspiring Healer**: Maintained a streak of 0-100 days.  
+  **Reward**: Access to unit tests without a subscription.
+
+- **Dedicated Scholar**: Maintained a streak of 101-200 days.  
+  **Reward**: Access to monthly tests, enhancing the learning experience.
+
+- **Medical Specialist**: Maintained a streak of 201-300 days.  
+  **Reward**: Ability to retake any unit or monthly test multiple times.
+
+- **Future Doctor**: Maintained a streak of over 300 days.  
+  **Reward**: Free access to mock tests, preparing comprehensively for any challenge.
+
+### UI Implementation
+
+- **Main Screen**: Displays the current streak and corresponding tier. It includes visual elements such as images and text to convey the streak's status and rewards.
+
+- **Streak Progress**: Utilizes a `LinearProgressIndicator` to show the user's progress towards maintaining their streak.
+
+### Reward Notifications
+
+- **Dialog Pop-ups**: When a user taps on a card representing their streak, a dialog appears with a congratulatory message and visual elements indicating the streak maintenance status.
+
+# Demo Video
 [Demo_Video](https://drive.google.com/file/d/1NDRJ8sWvpI0vxGFsazMLXkbzMzayEkFM/view?usp=drive_link)
 
 <table>
