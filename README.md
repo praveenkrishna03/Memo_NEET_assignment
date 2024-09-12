@@ -31,7 +31,7 @@ The **Memo Streak** feature has been implemented to motivate and track user enga
 - **Dialog Pop-ups**: When a user taps on a card representing their streak, a dialog appears with a congratulatory message and visual elements indicating the streak maintenance status.
 
 # Demo Video
-##[Demo_Video](https://drive.google.com/file/d/1NDRJ8sWvpI0vxGFsazMLXkbzMzayEkFM/view?usp=drive_link)
+[Demo_Video](https://drive.google.com/file/d/1NDRJ8sWvpI0vxGFsazMLXkbzMzayEkFM/view?usp=drive_link)
 
 <table>
   <tr>
