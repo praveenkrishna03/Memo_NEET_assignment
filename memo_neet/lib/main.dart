@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:memo_neet/pages/Home.dart';
+import 'package:memo_neet/pages/MemoStreaks.dart';
 import 'package:memo_neet/pages/Plans.dart';
 import 'package:memo_neet/pages/Settings.dart';
 import 'package:memo_neet/pages/TestSeries.dart';
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Memo NEET',
+      debugShowCheckedModeBanner: false,
       home: const MyHomePage(title: 'Memo NEET'),
     );
   }
@@ -39,59 +41,52 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
   
-  final List<Widget> _pages = [Home(), TestSeries(), Plans(), Settings()];
+  final List<Widget> _pages = [Home(), TestSeries(),MemoStreaks(), Plans(), Settings()];
 
   
 
  @override
   Widget build(BuildContext context) {
     return Scaffold(
-        /*appBar: AppBar(
-        backgroundColor: Colors.green,
-        actions: [
-          IconButton(
-              onPressed: () {
-                signOut();
-              },
-              icon: Icon(Icons.logout_outlined))
-        ],
-      ),*/
+       
         body: _pages[_currentIndex],
-        bottomNavigationBar: ClipRRect(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(5.0),
-            topRight: Radius.circular(5.0),
-          ),
+        bottomNavigationBar: Container(
+          color: Colors.blue, 
+          padding: EdgeInsets.all(2.0),
           child: BottomNavigationBar(
             currentIndex: _currentIndex,
             onTap: _onItemTapped,
             type: BottomNavigationBarType.fixed,
-            backgroundColor: Color.fromARGB(255, 26, 123, 51),
+            backgroundColor: Colors.white,
             selectedItemColor:
-                Color.fromARGB(255, 163, 230, 165), // Set selected icon color
-            unselectedItemColor: Color.fromARGB(181, 6, 69, 7),
-            iconSize: 40,
+                Colors.blue, 
+            unselectedItemColor: Colors.black,
+            iconSize: 30,
+            selectedLabelStyle: TextStyle(fontFamily: 'TiltNeon', fontSize: 12),
+            unselectedLabelStyle: TextStyle(fontFamily: 'TiltNeon', fontSize: 12),
             items: [
               BottomNavigationBarItem(
-                icon: Icon(Icons.home_filled),
+                icon: Icon(Icons.home_outlined),
                 label: 'Home',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.pending_actions),
+                icon: Icon(Icons.pending_actions_outlined),
                 label: 'Test Series',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.shopping_cart),
+                icon: Icon(Icons.local_fire_department_outlined),
+                label: 'MemoStreak',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.shopping_cart_outlined),
                 label: 'Plans',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.view_cozy),
+                icon: Icon(Icons.view_cozy_outlined),
                 label: 'Settings',
               ),
             ],
           ),
-        )
-        //Center(child: Text(user?.email ?? 'user email')),
-        );
+        ));
   }
 }
